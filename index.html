@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <style>
+    
+    .conte{
+      position: absolute;
+      z-index: 1000;
+    }
+    .conte2{
+      position: absolute;
+      z-index: 1000;
+      left: 200px;
+    }
+    .myButton {
+	box-shadow: 3px 4px 0px 0px #12224d;
+	background:linear-gradient(to bottom, #d6cf03 5%, #ada400 100%);
+	background-color:#d6cf03;
+	border-radius:5px;
+	border:1px solid #223a81;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #394e85;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ada400 5%, #d6cf03 100%);
+	background-color:#ada400;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+  </style>
+
+  <body>
+    <div class="conte">
+      <a href="https://instagram.com/geupcolombia?igshid=YmMyMTA2M2Y=">
+        <button class="myButton">Síguenos</button>
+      </a>
+    </div>
+    <div class="conte2">
+      <a href="http://repository.icesi.edu.co/biblioteca_digital/bitstream/10906/85035/3/acevedo_entrelazadas_relatos_2019.pdf">
+        <button class="myButton">Descarga</button>
+      </a>
+    </div>
+
+    <a-scene
+      mindar-image="imageTargetSrc:C:\Users\Angela\Documents\GitHub\entrelazados\targets (2).mind"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-video
+          src="./texto-entrelazadas animacion.mp4"
+          width="1.35"
+          height="2"
+        ></a-video>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
